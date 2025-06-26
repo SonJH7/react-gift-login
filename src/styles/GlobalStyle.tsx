@@ -1,4 +1,5 @@
-﻿import { Global, css } from "@emotion/react";
+import { Global, css } from "@emotion/react"
+import { spacing } from '@/theme/spacing'
 
 const GlobalStyle = () => (
   <Global
@@ -7,8 +8,8 @@ const GlobalStyle = () => (
       *::before,
       *::after {
         box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+        margin: ${spacing.spacing0};
+        padding: ${spacing.spacing0};
       }
       html,
       body,
@@ -18,13 +19,12 @@ const GlobalStyle = () => (
       #root {
         max-width: 720px;
         margin: 0 auto;
-        padding: 0 16px;
+        padding: 0 ${spacing.spacing4};
       }
       body {
         line-height: 1;
         -webkit-font-smoothing: antialiased;
         font-family: 'Pretendard', sans-serif;
-
       }
       ol,
       ul,
@@ -48,6 +48,6 @@ const GlobalStyle = () => (
       }
     `}
   />
-);
+)
 
-export default GlobalStyle;
+export default GlobalStyle

@@ -3,20 +3,21 @@ import { useState } from 'react'
 import styled from '@emotion/styled'
 import { colors } from '@/theme/color'
 import { typography } from '@/theme/typography'
+import { spacing } from '@/theme/spacing'
 
 const FilterBarWrapper = styled.div`
-  margin: 24px 0;
+  margin: ${spacing.spacing6} 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: ${spacing.spacing4};
 `
 
 const GenderToggleWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 127px;
-  padding: 0 16px;
-  margin-bottom: 1rem;
+  padding: 0 ${spacing.spacing4};
+  margin-bottom: ${spacing.spacing4};
 `
 
 const GenderButton = styled.button<{ selected: boolean }>`
@@ -24,11 +25,11 @@ const GenderButton = styled.button<{ selected: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px;
+  padding: ${spacing.spacing2};
   background-color: ${({ selected }) =>
     selected ? colors.blue[700] : colors.gray[100]};
   border: none;
-  border-radius: 12px;
+  border-radius: ${spacing.spacing3};
   cursor: pointer;
 
   &:hover {
@@ -43,7 +44,7 @@ const GenderIcon = styled.span`
 
 const GenderText = styled.span<{ selected: boolean }>`
   ${typography.label1Regular};
-  margin-top: 4px;
+  margin-top: ${spacing.spacing1};
   color: ${({ selected }) =>
     selected ? colors.blue[700] : colors.gray[900]};
 `
@@ -51,7 +52,7 @@ const GenderText = styled.span<{ selected: boolean }>`
 const SortTabsWrapper = styled.div`
   display: flex;
   background-color: ${colors.gray[100]};
-  border-radius: 8px;
+  border-radius: ${spacing.spacing2};
   overflow: hidden;
 `
 
